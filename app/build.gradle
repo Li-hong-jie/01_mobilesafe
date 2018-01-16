@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 26
@@ -28,4 +29,8 @@ dependencies {
     compile 'com.orhanobut:logger:2.1.1'
     compile 'org.xutils:xutils:3.5.0'
     implementation files('libs/xUtils-2.6.14.jar')
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }
