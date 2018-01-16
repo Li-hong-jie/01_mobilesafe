@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--将对应的属性抽取到样式文件中-->
+    <!--android:fitsSystemWindows="true"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00ff00"
+            android:gravity="center"
+            android:paddingVertical="15dp"
+            android:text="功能列表"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    -->
+    <TextView
+        style="@style/TitleStyle"
+        android:text="功能列表" />
+
+    <!--
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:text="Android中网络请求一般使用Apache HTTP Client或者采用HttpURLConnect，但是直接使用这两个类库需要写大量的代码才能完成网络post和get请求，而使用android-async-http这个库可以大大的简化操作，它是基于Apache’s HttpClient ，所有的请求都是独立在UI主线程之外，通过回调方法处理请求结果，采用android Handler message 机制传递信息。" />
+    -->
+    <com.lhj.mobilesafe.view.FocusTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:text="Android中网络请求一般使用Apache HTTP
+        Client或者采用HttpURLConnect，但是直接使用这两个类库需要写大量的代码才能完成网络post和get请求，而使用android-async-http这个库可以大大的简化操作，它是基于Apache’s
+        HttpClient ，所有的请求都是独立在UI主线程之外，通过回调方法处理请求结果，采用android Handler message 机制传递信息。">
+    </com.lhj.mobilesafe.view.FocusTextView>
+    
+    <GridView
+        android:id="@+id/gv_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:verticalSpacing="20dp">
+    </GridView>
+</LinearLayout>
