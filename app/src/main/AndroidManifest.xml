@@ -20,6 +20,8 @@
         <activity android:name=".activity.HomeActivity"/>
         <activity android:name=".activity.SettingActivity"/>
         <activity android:name=".activity.TestActivity"/>
+        <activity android:name=".activity.SetupOverActivity"/>
+        <activity android:name=".activity.Setup1Activity"/>
     </application>
 
 </manifest>

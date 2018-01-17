@@ -137,7 +137,7 @@ public class HomeActivity extends Activity {
                     String confirmPsd = SpUtils.getString(getApplicationContext(), ConstantValue.MOBILE_SAFE_PSD, "");
                     if (confirmPsd.equals(MD5Util.MD5(psd))) {
                         //进入手机防盗模块
-                        Intent intent = new Intent(getApplicationContext(), TestActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), SetupOverActivity.class);
                         startActivity(intent);
                         dialog.dismiss();
                     } else {
@@ -186,7 +186,7 @@ public class HomeActivity extends Activity {
                 if (!TextUtils.isEmpty(psd) && !TextUtils.isEmpty(confirmPsd)) {
                     if (psd.equals(confirmPsd)) {
                         //进入手机防盗模块
-                        Intent intent = new Intent(getApplicationContext(), TestActivity.class);
+                        Intent intent = new Intent(getApplicationContext(), SetupOverActivity.class);
                         startActivity(intent);
                         dialog.dismiss();
                         SpUtils.putString(getApplicationContext(), ConstantValue.MOBILE_SAFE_PSD, MD5Util.MD5(confirmPsd));
