@@ -1,5 +1,6 @@
 package com.lhj.mobilesafe.utils;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
@@ -22,8 +23,8 @@ public class SpUtils {
     }
 
     /**
-     * @param ctx       上下文环境
-     * @param key       存储节点名称
+     * @param ctx      上下文环境
+     * @param key      存储节点名称
      * @param defValue 默认存储节点的值 boolean
      * @return 默认值或者此节点读取到的方法
      */
@@ -50,8 +51,8 @@ public class SpUtils {
     }
 
     /**
-     * @param ctx       上下文环境
-     * @param key       存储节点名称
+     * @param ctx      上下文环境
+     * @param key      存储节点名称
      * @param defValue 默认存储节点的值
      * @return 默认值或者此节点读取到的方法
      */
@@ -62,5 +63,19 @@ public class SpUtils {
             sp = ctx.getSharedPreferences("config", Context.MODE_PRIVATE);
         }
         return sp.getString(key, defValue);
+    }
+
+    /**
+     * 从sp中移除指定节点
+     *
+     * @param ctx 上下文环境
+     * @param key 需要移除节点的名称
+     */
+    @SuppressLint("CommitPrefEdits")
+    public static void remove(Context ctx, String key) {
+        if (sp == null) {
+            sp = ctx.getSharedPreferences("config", Context.MODE_PRIVATE);
+        }
+        sp.edit().remove(key);
     }
 }

@@ -13,4 +13,8 @@ public class ConstantValue {
      * 是否设置完成导航界面
      */
     public static final String SETUP_OVER ="setup_over" ;
+    /**
+     * 是否绑定SIM卡序列号
+     */
+    public static final String SIM_NUMBER = "sim_number";
 }

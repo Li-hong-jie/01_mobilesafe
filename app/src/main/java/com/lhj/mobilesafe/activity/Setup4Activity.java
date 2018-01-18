@@ -9,8 +9,10 @@ import android.view.View;
 import android.view.WindowManager;
 
 import com.lhj.mobilesafe.R;
+import com.lhj.mobilesafe.utils.ConstantValue;
+import com.lhj.mobilesafe.utils.SpUtils;
 
-public class Setup1Activity extends Activity{
+public class Setup4Activity extends Activity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,13 +22,21 @@ public class Setup1Activity extends Activity{
         }
         //设置黑色状态栏字体
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            getWindow().getDecorView().setSystemUiVisibility( View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN|View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
-        setContentView(R.layout.activity_setup1);
+        setContentView(R.layout.activity_setup4);
     }
-    public void nextPage(View v){
-        Intent intent = new Intent(getApplicationContext(), Setup2Activity.class);
+    public void nextPage(View v) {
+        Intent intent = new Intent(getApplicationContext(), SetupOverActivity.class);
+        startActivity(intent);
+        finish();
+        SpUtils.putBoolean(this, ConstantValue.SETUP_OVER,true);
+    }
+
+    public void prePage(View v) {
+        Intent intent = new Intent(getApplicationContext(), Setup3Activity.class);
         startActivity(intent);
         finish();
     }
+
 }
