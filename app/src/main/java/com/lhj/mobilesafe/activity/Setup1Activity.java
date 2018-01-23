@@ -28,5 +28,7 @@ public class Setup1Activity extends Activity{
         Intent intent = new Intent(getApplicationContext(), Setup2Activity.class);
         startActivity(intent);
         finish();
+        //下一页动画
+        overridePendingTransition(R.anim.next_in_anim,R.anim.next_out_anim);
     }
 }

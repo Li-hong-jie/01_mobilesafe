@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <TextView
-        android:onClick="click"
+<TextView
+    style="@style/TitleStyle"
+    android:text="选择联系人"/>
+    <ListView
+        android:id="@+id/lv_contact"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:text="设置完成界面"/>
+        android:layout_height="wrap_content" />
+
 </LinearLayout>

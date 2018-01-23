@@ -37,4 +37,10 @@ public class SetupOverActivity extends Activity {
             finish();
         }
     }
+
+    public void click(View view) {
+        Intent intent = new Intent(this, Setup1Activity.class);
+        startActivity(intent);
+        finish();
+    }
 }
