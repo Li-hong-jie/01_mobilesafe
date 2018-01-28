@@ -6,7 +6,7 @@ android {
     defaultConfig {
         applicationId "com.lhj.mobilesafe"
         minSdkVersion 15
-        targetSdkVersion 27
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -26,8 +26,8 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
-    compile 'com.orhanobut:logger:2.1.1'
-    compile 'org.xutils:xutils:3.5.0'
+    implementation 'com.orhanobut:logger:2.1.1'
+    implementation 'org.xutils:xutils:3.5.0'
     implementation files('libs/xUtils-2.6.14.jar')
 //    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
